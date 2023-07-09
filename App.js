@@ -41,7 +41,7 @@ function App() {
         onPress={doSum}
         activeOpacity={0.7}
         style={{backgroundColor: 'red', padding: 30}}>
-        <Text style={{color: 'green', fontSize: 29}}>HELLO</Text>
+        <Text style={{color: 'black', fontSize: 29}}>HELLO</Text>
       </TouchableOpacity>
     </View>
   );
