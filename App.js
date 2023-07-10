@@ -5,12 +5,20 @@
  * @format
  */
 
-import React, {useEffect} from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+  TextInput,
+} from 'react-native';
 import Crashes from 'appcenter-crashes';
 import Analytics from 'appcenter-analytics';
+import codePush from 'react-native-code-push';
 
 function App() {
+  const [text, setText] = useState('');
   useEffect(() => {
     checkPreviousSession();
   }, []);
@@ -40,9 +48,13 @@ function App() {
       <TouchableOpacity
         onPress={doSum}
         activeOpacity={0.7}
-        style={{backgroundColor: 'red', padding: 30}}>
-        <Text style={{color: 'black', fontSize: 29}}>HELLO</Text>
+        style={{backgroundColor: '#32a852', padding: 30}}>
+        <Text style={{color: 'white', fontSize: 29}}>Press to track</Text>
       </TouchableOpacity>
+      <Text style={{color: 'black', fontSize: 16}}>Second OTA UPDATE</Text>
+      <Text style={{color: 'black', fontSize: 16, fontWeight: 'bold'}}>
+        Ammar nigga
+      </Text>
     </View>
   );
 }
@@ -50,7 +62,8 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'gray',
+    height: '100%',
   },
   player: {
     backgroundColor: 'white',
@@ -59,4 +72,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default codePush(App);
