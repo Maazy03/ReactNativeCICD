@@ -26,7 +26,7 @@ function App() {
   const doSum = async () => {
     console.log('DO SUYM');
     console.log('DO SUYM22');
-    await Analytics.trackEvent('SMD@', {
+    await Analytics.trackEvent('SMD-----', {
       Internet: 'Data',
       mobileName: 'Sa,sung',
       product: 'DOne',
