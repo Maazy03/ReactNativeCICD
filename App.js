@@ -6,13 +6,7 @@
  */
 
 import React, {useEffect, useState} from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  TouchableOpacity,
-  TextInput,
-} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import Crashes from 'appcenter-crashes';
 import Analytics from 'appcenter-analytics';
 import codePush from 'react-native-code-push';
