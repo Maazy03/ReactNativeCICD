@@ -19,7 +19,7 @@ function App() {
     const didCrash = await Crashes.hasCrashedInLastSession();
     if (didCrash) {
       const report = await Crashes.lastSessionCrashReport();
-      console.log('REPORT COMING 22222222');
+      // console.log('REPORT COMING 22222222');
     }
   };
 
